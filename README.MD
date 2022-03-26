@@ -10,15 +10,15 @@
 ## Game Description
 
 - Initially, the board is filled with balloons in different colors and bombs.
-- The player can eliminate three or more 8-connected balloons with the same color by selecting a not self-intersecting path within the board. Once a balloon is eliminated, the bombs (if any) that are 8-connected with it will also be eliminated. The more bombs the player eliminate at a time, the higher the score they will get.
-- After every operation, blocks/bombs that are no longer supported will fall down, and the empty spaces will be filled by newly generated balloons.
+- The player can eliminate three or more 8-connected balloons with the same color by selecting a not self-intersected path within the board. Once a balloon is eliminated, the bombs (if any) that are 8-connected with it will also be eliminated. The more bombs the player eliminate at a time, the higher the score they will get.
 - However, if no bombs are eliminated after the operation, some random balloons will be replaced with bombs.
-- If all the bombs are eliminated, the player will advance to the next level, and the number of initial bombs will also increase.
+- After every operation, balloons and bombs that are no longer supported will fall down, and the vacancies will be filled with newly generated balloons.
+- If all the bombs are eliminated, the player will advance to the next level, where there are more bombs.
 
 ## Game Features
 
 1. Generation of random game sets or events
-   - All the balloons and bombs are randomly generated. Players can also choose to manually enter random seeds.
+   - All the balloons and bombs are randomly generated. Player can also choose to manually enter a random seed.
 2. Data structures for storing game status
    - class `Map`: store the content of the board.
    - class `Leaderboard`: store the leaderboard.
