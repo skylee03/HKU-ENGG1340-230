@@ -11,6 +11,9 @@ void init_interface();
 // show mainmenu and handle key events
 void show_mainmenu();
 
+// start a new game
+void new_game();
+
 // show leaderboard and handle key events
 void show_leaderboard();
 
