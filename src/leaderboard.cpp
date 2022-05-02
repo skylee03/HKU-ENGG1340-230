@@ -34,7 +34,7 @@ void Leaderboard::insert(const std::string &name, const int &score) {
 }
 
 void Leaderboard::save() const {
-  auto f = fopen("log/leaderboard.txt", "w+");
+  auto f = fopen(LEADERBOARD_PATH, "w+");
   for(const auto &[name, score]:players) {
     fprintf(f, "%s %d", name.c_str(), score);
   }
