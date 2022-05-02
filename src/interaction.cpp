@@ -39,7 +39,35 @@ void show_mainmenu() {
 }
 
 void new_game() {
-  
+  clear();
+  auto map = new Map;
+  mvprintw(19, 0, "[1] Return");
+  for(;;) {
+    show_map(*map);
+    refresh();
+    int c = getch();
+    while(!('1' <= c && c <= '1')) c = getch();
+    if(c == '1') {
+      break;
+    }
+  }
+  delete map;
+}
+
+void show_map(const Map &map) {
+  start_color();
+  init_pair(0, COLOR_WHITE, COLOR_BLACK);
+  init_pair(1, COLOR_RED,   COLOR_BLACK);
+  init_pair(2, COLOR_GREEN, COLOR_BLACK);
+  init_pair(3, COLOR_BLUE,  COLOR_BLACK);
+  init_pair(4, COLOR_CYAN,  COLOR_BLACK);
+  for(int i = 0; i < SIZE_H; i++) {
+    for(int j = 0; j < SIZE_W; j++) {
+      attron(COLOR_PAIR(map.blocks[i][j].type));
+      mvaddch(i, j, BLOCK_APPEARANCE[map.blocks[i][j].type]);
+      attroff(COLOR_PAIR(map.blocks[i][j].type));
+    }
+  }
 }
 
 void show_leaderboard() {

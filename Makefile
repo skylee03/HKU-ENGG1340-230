@@ -24,7 +24,12 @@ obj/fileio.o: src/fileio.cpp src/fileio.h
 	@g++ $(FLAGS) -lncurses $< -g -c -o $@
 	@echo "Done."
 
-bin/game: src/main.cpp obj/leaderboard.o obj/interaction.o obj/fileio.o
+obj/map.o: src/map.cpp src/map.h
+	@echo "Compiling map.o..."
+	@g++ $(FLAGS) -lncurses $< -g -c -o $@
+	@echo "Done."
+
+bin/game: src/main.cpp obj/leaderboard.o obj/interaction.o obj/fileio.o obj/map.o
 	@mkdir bin
 	@echo "Compiling game..."
 	@g++ $(FLAGS) $^ -lncurses -g -o $@
