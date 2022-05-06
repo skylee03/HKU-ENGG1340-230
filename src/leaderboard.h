@@ -13,14 +13,14 @@ class Leaderboard {
  public:
   struct Player {
     time_t time;
-    int score;
+    long long score;
     Player();
-    Player(const time_t &time, const int &score);
+    Player(const time_t &time, const long long &score);
   };
   std::vector<Player> players;
   Leaderboard(FILE *const &f);
   void reset();
-  void insert(const time_t &time, const int &score);
+  void insert(const time_t &time, const long long &score);
   void save() const;
 };
 

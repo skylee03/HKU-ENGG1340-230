@@ -117,7 +117,7 @@ void show_leaderboard() {
     printw("+--------------------------------------------+\n");
     int count = 0;
     for(const auto &[time, score]:leaderboard->players) {
-      printw("| %3d |  %.19s | %13d |\n", count++, ctime(&time), score);
+      printw("| %3d |  %.19s | %13lld |\n", count++, ctime(&time), score);
     }
     printw("|____________________________________________|\n");
     mvprintw(19, 0, "[1] Return | [2] Reset Leaderboard");
