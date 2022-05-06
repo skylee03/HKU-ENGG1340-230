@@ -54,6 +54,8 @@ We use [`ncurses`](https://invisible-island.net/ncurses/) to visualize the game 
 - Execute the game: `./bin/game`
 - Remove the build and log files: `make clean clean-log`
 
+Compilation has been tested on `academy11` server.
+
 ## Game Instructions
 
 Simply follow the instructions in the game interface.
