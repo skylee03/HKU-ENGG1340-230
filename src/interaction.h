@@ -1,10 +1,12 @@
 #ifndef INTERACTION_H
 #define INTERACTION_H
 
+#include <ctime>
 #include <cstdlib>
 #include <ncurses.h>
 #include "fileio.h"
 #include "map.h"
+#include "leaderboard.h"
 
 // necessary inisialization for ncurses
 void init_interface();

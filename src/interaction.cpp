@@ -109,11 +109,11 @@ void show_leaderboard() {
     clear();
     move(0, 0);
     printw("______________________________________________\n");
-    printw("|  #  |         NAME         |     SCORE     |\n");
+    printw("|  #  |         TIME         |     SCORE     |\n");
     printw("+--------------------------------------------+\n");
     int count = 0;
-    for(const auto &[name, score]:leaderboard->players) {
-      printw("| %3d | %20s | %13d |\n", count++, name.c_str(), score);
+    for(const auto &[time, score]:leaderboard->players) {
+      printw("| %3d | %20s | %13d |\n", count++, ctime(&time), score);
     }
     printw("|____________________________________________|\n");
     mvprintw(19, 0, "[1] Return | [2] Reset Leaderboard");
