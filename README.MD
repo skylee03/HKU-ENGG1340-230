@@ -10,7 +10,7 @@
 ## Game Description
 
 - Initially, the board is filled with balloons in 4 different colors and bombs.
-- The player can eliminate three or more 8-connected balloons with the same color by selecting a not self-intersected path within the board. Once a balloon is eliminated, the bombs (if any) that are 8-connected with it will also be eliminated. If $n$ is the number of balloons eliminated in one turn, the total score will be increased by $n \times \lfloor \log_2 n \rfloor$.
+- The player can eliminate three or more 8-connected balloons with the same color by selecting a not self-intersected path within the board. Once a balloon is eliminated, the bombs (if any) that are 8-connected with it will also be eliminated. If ![](https://render.githubusercontent.com/render/math?math=n) is the number of balloons eliminated in one turn, the total score will be increased by ![](https://render.githubusercontent.com/render/math?math=n\times\lfloor\log_2n\rfloor).
 - However, if no bombs are eliminated after the operation, the score will not be increased, and a random balloon will be replaced with a bomb.
 - After every operation, the vacancies will be filled with newly generated balloons.
 - The player wins the game in case all the bombs are wliminated, and the leaderboard will be updated automatically.
