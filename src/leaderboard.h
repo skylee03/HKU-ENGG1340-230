@@ -9,6 +9,7 @@
 
 class Leaderboard {
  private:
+  // pointer to the leaderboard.txt file
   FILE *file;
  public:
   struct Player {
@@ -19,8 +20,11 @@ class Leaderboard {
   };
   std::vector<Player> players;
   Leaderboard(FILE *const &f);
+  // remove all records
   void reset();
+  // insert a record
   void insert(const time_t &time, const long long &score);
+  // save the leaderboard
   void save() const;
 };
 
