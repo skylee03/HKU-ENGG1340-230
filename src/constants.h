@@ -2,8 +2,8 @@
 #define CONSTANTS_H
 
 constexpr char        LEADERBOARD_PATH[] ("log/leaderboard.txt");
-constexpr int         SIZE_H             (15);
-constexpr int         SIZE_W             (60);
+constexpr int         SIZE_H             (5);
+constexpr int         SIZE_W             (10);
 constexpr int         NUM_OF_TYPES       (5);
 constexpr int         BOMB               (0);
 constexpr char        BLOCK_APPEARANCE[] ("@RGBC");

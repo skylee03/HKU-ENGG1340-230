@@ -77,6 +77,10 @@ void new_game() {
       map->eliminate();
     }
   }
+  auto leaderboard = new Leaderboard(access_leaderboard("rw+"));
+  leaderboard->insert(time(nullptr), map->score);
+  leaderboard->save();
+  delete leaderboard;
   delete map;
 }
 
@@ -113,7 +117,7 @@ void show_leaderboard() {
     printw("+--------------------------------------------+\n");
     int count = 0;
     for(const auto &[time, score]:leaderboard->players) {
-      printw("| %3d | %20s | %13d |\n", count++, ctime(&time), score);
+      printw("| %3d |  %.19s | %13d |\n", count++, ctime(&time), score);
     }
     printw("|____________________________________________|\n");
     mvprintw(19, 0, "[1] Return | [2] Reset Leaderboard");
