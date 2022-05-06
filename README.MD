@@ -7,6 +7,10 @@
 |YANG Mingtian|3035845576|[skylee03](https://github.com/skylee03)|
 |TU Huaqiang|3035772834|[Hawk-Tu](https://github.com/Hawk-Tu)|
 
+## Screenshot
+
+![](assets/screenshot.png)
+
 ## Game Description
 
 - Initially, the board is filled with balloons in 4 different colors and bombs.
@@ -42,3 +46,14 @@
 ## External Libraries
 
 We use [`ncurses`](https://invisible-island.net/ncurses/) to visualize the game as well as to accept inputs from both the keyboard and the mouse.
+
+## Compilation & Execution Instructions
+
+- Download & install the `ncurses` library: `make ncurses`
+- Compile & generate executable: `make all`
+- Execute the game: `./bin/game`
+- Remove the build and log files: `make clean clean-log`
+
+## Game Instructions
+
+Simply follow the instructions in the game interface.
