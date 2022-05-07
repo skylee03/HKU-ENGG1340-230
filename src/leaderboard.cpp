@@ -36,7 +36,7 @@ void Leaderboard::insert(const time_t &time, const long long &score) {
 void Leaderboard::save() const {
   auto f = fopen(LEADERBOARD_PATH, "w+");
   for(const auto &[time, score]:players) {
-    fprintf(f, "%ld %lld", time, score);
+    fprintf(f, "%ld %lld\n", time, score);
   }
   fclose(f);
 }
