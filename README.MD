@@ -59,3 +59,8 @@ Compilation has been tested on `academy11` server.
 ## Game Instructions
 
 Simply follow the instructions in the game interface.
+
+## Video
+
+[![](https://img.shields.io/badge/-Bilibili-00a1d6?style=flat-square&logo=bilibili&logoColor=white)](https://b23.tv/O9VUdoq)
+[![](https://img.shields.io/badge/-YouTube-ff0000?style=flat-square&logo=youtube&logoColor=white)](https://youtu.be/IYM7Tv3zK2I)
